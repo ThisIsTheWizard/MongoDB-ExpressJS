@@ -3,10 +3,8 @@ const statements = require('../models/statements');
 const router = express.Router();
 
 router.get('/statements/get/:id', async (req, res) => {
-	await statements
-		.find(req.params.id)
-		.then((statements) => res.send(statements))
-		.catch((err) => res.status(201).send(err));
+	let query = { reg_no: req.params.id };
+	await statements.find(query).then((statements) => res.send(statements)).catch((err) => res.status(201).send(err));
 });
 router.post('/statements/post', async (req, res) => {
 	await statements
