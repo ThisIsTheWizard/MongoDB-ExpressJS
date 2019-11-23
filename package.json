@@ -1,12 +1,11 @@
 {
-	"name": "new",
+	"name": "sk-mega-mall",
 	"version": "1.0.0",
 	"description": "",
 	"main": "app.js",
 	"scripts": {
 		"start": "node src/app.js",
-		"serve": "nodemon src/app.js",
-		"build": "build src/app.js"
+		"serve": "nodemon src/app.js"
 	},
 	"author": "",
 	"license": "ISC",
