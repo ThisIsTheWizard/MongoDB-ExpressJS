@@ -2,12 +2,14 @@ const mongoose = require('mongoose');
 
 const userSchema = mongoose.Schema(
 	{
-		reg_no: { type: Number, unique: true },
-		user_name: { type: String, unique: true },
+		reg_no: { type: Number },
+		user_name: { type: String },
 		full_name: { type: String },
-		cell: { type: String, unique: true },
-		email: { type: String, unique: true },
-		address: { type: String }
+		cell: { type: String },
+		email: { type: String },
+		address: { type: String },
+		balance: { type: Number },
+		lastDep: { type: Number }
 	},
 	{
 		timestamps: true
