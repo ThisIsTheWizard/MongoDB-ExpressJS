@@ -9,16 +9,9 @@ router.get('/statements/get/:id', async (req, res) => {
 	let query = { reg_no: req.params.id };
 	await statements.find(query).then((statements) => res.send(statements)).catch((err) => res.status(201).send(err));
 });
-router.post('/statements/post/:id', async (req, res) => {
-	let newStatement = {
-		reg_no: req.params.id,
-		particulars: req.body.particulars,
-		deposited: req.body.deposited,
-		withdrawn: req.body.withdrawn,
-		total: req.body.total
-	};
+router.post('/statements/post', async (req, res) => {
 	await statements
-		.create(newStatement)
+		.create(req.body)
 		.then((statements) => res.send(statements))
 		.catch((err) => res.status(404).send(err));
 });
