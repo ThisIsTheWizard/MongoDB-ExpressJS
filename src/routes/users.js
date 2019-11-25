@@ -3,7 +3,7 @@ const users = require('../models/users');
 const router = express.Router();
 
 router.get('/users/get', async (req, res) => {
-	await users.findOne().then((users) => res.send(users)).catch((err) => res.status(404).send(err));
+	await users.find().then((users) => res.send(users)).catch((err) => res.status(404).send(err));
 });
 router.get('/users/get/:id', async (req, res) => {
 	let query = { reg_no: req.params.id };
