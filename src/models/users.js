@@ -8,8 +8,7 @@ const userSchema = mongoose.Schema(
 		cell: { type: String },
 		email: { type: String },
 		address: { type: String },
-		balance: { type: Number },
-		lastDep: { type: Number }
+		balance: { type: Number }
 	},
 	{
 		timestamps: true
