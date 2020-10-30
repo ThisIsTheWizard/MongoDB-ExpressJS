@@ -14,7 +14,7 @@ app.use(users);
 app.use(accounts);
 
 mongoose.connect(
-	'mongodb+srv://the_wizard:Thewizard421@@cluster0-llcuf.gcp.mongodb.net/myDB?retryWrites=true&w=majority',
+	'mongodb+srv://username:password@url',
 	{
 		useNewUrlParser: true,
 		useFindAndModify: true,
